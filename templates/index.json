@@ -8,20 +8,20 @@
  * ------------------------------------------------------------
  */{
   "sections": {
-    "hero_jVaWmY": {
+    "hero_caps_brand": {
       "type": "hero",
       "blocks": {
-        "text_YLPk4p": {
+        "heading": {
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<p>Browse our latest products</p>",
+            "text": "<h1>Gorras bélicas pa' la calle</h1><p>Estilo tumbado, visera curva y edición limitada inspirada en el movimiento.</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
-            "type_preset": "h2",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
+            "type_preset": "h1",
+            "font": "var(--font-heading--family)",
+            "font_size": "",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
@@ -37,11 +37,26 @@
           },
           "blocks": {}
         },
-        "button_H9gpTf": {
+        "cta_shop": {
           "type": "button",
           "name": "t:names.button",
           "settings": {
-            "label": "Shop all",
+            "label": "Comprar gorras",
+            "link": "shopify://collections/all",
+            "open_in_new_tab": false,
+            "style_class": "button-primary",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        },
+        "cta_drop": {
+          "type": "button",
+          "name": "t:names.button",
+          "settings": {
+            "label": "Ver drops nuevos",
             "link": "shopify://collections/all",
             "open_in_new_tab": false,
             "style_class": "button-secondary",
@@ -53,11 +68,8 @@
           "blocks": {}
         }
       },
-      "block_order": [
-        "text_YLPk4p",
-        "button_H9gpTf"
-      ],
-      "name": "t:names.hero",
+      "block_order": ["heading", "cta_shop", "cta_drop"],
+      "name": "Hero principal gorras",
       "settings": {
         "media_type_1": "image",
         "media_type_2": "image",
@@ -71,24 +83,51 @@
         "horizontal_alignment": "space-between",
         "vertical_alignment": "flex-end",
         "align_baseline": true,
-        "horizontal_alignment_flex_direction_column": "center",
+        "horizontal_alignment_flex_direction_column": "flex-start",
         "vertical_alignment_flex_direction_column": "flex-end",
-        "gap": 24,
+        "gap": 16,
         "section_width": "page-width",
-        "section_height": "medium",
-        "section_height_custom": 50,
+        "section_height": "large",
+        "section_height_custom": 60,
         "color_scheme": "scheme-6",
         "toggle_overlay": true,
-        "overlay_color": "#12121266",
+        "overlay_color": "#12121280",
         "overlay_style": "solid",
         "gradient_direction": "to bottom",
         "blurred_reflection": false,
         "reflection_opacity": 75,
-        "padding-block-start": 100,
+        "padding-block-start": 110,
         "padding-block-end": 72
       }
     },
-    "product_list_fa6P9H": {
+    "marquee_brand": {
+      "type": "marquee",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>ENVÍOS A TODO MÉXICO · CALIDAD PREMIUM · DROP SEMANAL</p>",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_size": "var(--font-size--h5)",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "uppercase",
+            "wrap": "nowrap",
+            "width": "fit-content"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "movement_direction": "normal",
+        "color_scheme": "scheme-3",
+        "padding-block-start": 14,
+        "padding-block-end": 14,
+        "gap_between_elements": 36
+      }
+    },
+    "product_list_caps": {
       "type": "product-list",
       "blocks": {
         "static-header": {
@@ -125,11 +164,11 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "product_list_text_YFtzcL": {
+            "product_list_text": {
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3>{{ closest.collection.title }}</h3>",
+                "text": "<h3>Top ventas del movimiento</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -151,11 +190,11 @@
               },
               "blocks": {}
             },
-            "product_list_button_MWeP9V": {
+            "product_list_button": {
               "type": "_product-list-button",
               "name": "t:names.product_list_button",
               "settings": {
-                "label": "View all",
+                "label": "Ver catálogo completo",
                 "open_in_new_tab": false,
                 "style_class": "link",
                 "width": "fit-content",
@@ -166,10 +205,7 @@
               "blocks": {}
             }
           },
-          "block_order": [
-            "product_list_text_YFtzcL",
-            "product_list_button_MWeP9V"
-          ]
+          "block_order": ["product_list_text", "product_list_button"]
         },
         "static-product-card": {
           "type": "_product-card",
@@ -189,7 +225,7 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "product_card_gallery_677WP3": {
+            "product_card_gallery": {
               "type": "_product-card-gallery",
               "name": "t:names.product_card_media",
               "settings": {
@@ -205,7 +241,7 @@
               },
               "blocks": {}
             },
-            "product_title_YXxMTj": {
+            "product_title": {
               "type": "product-title",
               "name": "t:names.product_title",
               "settings": {
@@ -230,7 +266,7 @@
               },
               "blocks": {}
             },
-            "price_JQzVV4": {
+            "price": {
               "type": "price",
               "name": "t:names.product_price",
               "settings": {
@@ -254,23 +290,19 @@
               "blocks": {}
             }
           },
-          "block_order": [
-            "product_card_gallery_677WP3",
-            "product_title_YXxMTj",
-            "price_JQzVV4"
-          ]
+          "block_order": ["product_card_gallery", "product_title", "price"]
         }
       },
-      "name": "Featured collection",
+      "name": "Colección destacada gorras",
       "settings": {
         "collection": "all",
         "layout_type": "grid",
-        "carousel_on_mobile": false,
+        "carousel_on_mobile": true,
         "max_products": 8,
         "columns": 4,
-        "mobile_columns": "2",
-        "mobile_card_size": "60cqw",
-        "columns_gap": 8,
+        "mobile_columns": "1",
+        "mobile_card_size": "75cqw",
+        "columns_gap": 12,
         "rows_gap": 24,
         "icons_style": "arrow",
         "icons_shape": "none",
@@ -278,13 +310,10 @@
         "horizontal_alignment": "flex-start",
         "gap": 28,
         "color_scheme": "scheme-1",
-        "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-start": 56,
+        "padding-block-end": 56
       }
     }
   },
-  "order": [
-    "hero_jVaWmY",
-    "product_list_fa6P9H"
-  ]
+  "order": ["hero_caps_brand", "marquee_brand", "product_list_caps"]
 }
